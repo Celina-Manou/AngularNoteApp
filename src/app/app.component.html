@@ -1,0 +1,23 @@
+<div [hidden]="hidden" >
+<main class="page-content">
+        <div class="cardMain">
+        <div class="content">
+        <h2 class="title">be You, do You</h2>
+        <p class="copy"> “Be yourself; everyone else is already taken.”
+          ― Oscar Wilde
+      </p>
+        <a class="btnMain" (click)="showDiv.previous = !showDiv.previous; toggleHidden();">Keep your notes!</a>
+      </div>
+    </div>
+</main>
+</div>
+<div *ngIf="showDiv.previous" >
+
+<article>
+  <modal></modal>
+</article>
+
+<section>
+<router-outlet ></router-outlet>
+</section>
+</div>
